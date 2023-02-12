@@ -1,2 +1,2 @@
-# scripts
- A reference repository for my most used scripts
+# General use scripts
+ A reference repository of some scripts for later
