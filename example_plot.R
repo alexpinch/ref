@@ -6,6 +6,7 @@ theme_connor <- theme_minimal() + # A bunch of Connor Nelson's aesthetic specifi
   theme( 
     legend.text = element_text(size = 12), axis.title = element_text(size = 14), panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), plot.background = element_rect(fill = "white") 
   )
+
 plot1 <- function(df, filename, width, height) {
   df %>%
     filter() %>%
@@ -17,6 +18,8 @@ plot1 <- function(df, filename, width, height) {
     theme_connor
   ggsave(filename, device = "jpeg", width = width, height = height)
 }
+plot1(df, "plot1.jpeg", width = 5, height = 5)
+
 plot2 <- function(df, filename, width, height) {
   df %>%
     filter() %>%
@@ -29,5 +32,4 @@ plot2 <- function(df, filename, width, height) {
     theme_connor + scale_fill_ucscgb()
   ggsave(filename, device = "jpeg", width = width, height = height)
 }
-plot1(df, "plot1.jpeg", width = 5, height = 5)
 plot2(df, "plot2.jpeg", width = 7, height = 5)
